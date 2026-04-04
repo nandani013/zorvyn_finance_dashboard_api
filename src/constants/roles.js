@@ -1,0 +1,17 @@
+/** @typedef {'VIEWER' | 'ANALYST' | 'ADMIN'} Role */
+
+const ROLES = Object.freeze({
+  VIEWER: 'VIEWER',
+  ANALYST: 'ANALYST',
+  ADMIN: 'ADMIN',
+});
+
+const USER_STATUS = Object.freeze({
+  ACTIVE: 'ACTIVE',
+  INACTIVE: 'INACTIVE',
+});
+
+const ALL_ROLES = [ROLES.VIEWER, ROLES.ANALYST, ROLES.ADMIN];
+const ALL_USER_STATUSES = [USER_STATUS.ACTIVE, USER_STATUS.INACTIVE];
+
+module.exports = { ROLES, USER_STATUS, ALL_ROLES, ALL_USER_STATUSES };
