@@ -2,19 +2,25 @@
 
 Express.js backend for a finance dashboard with **MongoDB**, **JWT authentication**, and **role-based access control** (`VIEWER`, `ANALYST`, `ADMIN`).
 
-## 🚀 Live API
+## 🌍 Live API
 
 **Base URL:**
 [https://zorvyn-finance-dashboard-api-ozlf.onrender.com](https://zorvyn-finance-dashboard-api-ozlf.onrender.com)
 
-### Test Endpoint
+⚠️ **Note:**
+Opening base URL shows a welcome message.
+
+**Use endpoints like:**
 **GET** `/api/dashboard/summary`
+## ✨ Features
 
-**Full URL:**
-[https://zorvyn-finance-dashboard-api-ozlf.onrender.com/api/dashboard/summary](https://zorvyn-finance-dashboard-api-ozlf.onrender.com/api/dashboard/summary)
+- JWT Authentication
+- Role-Based Access Control (RBAC)
+- Add / View financial records
+- Dashboard analytics (income, expense, balance)
+- MongoDB Atlas integration
+- Deployed on Render
 
-> [!NOTE] 
-> Opening the Base URL directly in your browser will just show a welcome/health message. **You must use the specific API endpoints (like those in Postman) to retrieve the actual data.**
 ## Stack
 
 - Node.js, Express.js  
@@ -59,7 +65,7 @@ Express.js backend for a finance dashboard with **MongoDB**, **JWT authenticatio
 
    Optional seed env vars: `SEED_ADMIN_EMAIL`, `SEED_ADMIN_PASSWORD` (defaults in `scripts/seedAdmin.js`).
 
-4. Health check: `GET http://localhost:5001/health`
+4. Health check: `GET https://zorvyn-finance-dashboard-api-ozlf.onrender.com/health`
 
 ## API overview
 
@@ -85,7 +91,7 @@ Express.js backend for a finance dashboard with **MongoDB**, **JWT authenticatio
 
 ### Postman
 
-1. Create requests with base URL `http://localhost:5001`.
+1. Create requests with base URL `https://zorvyn-finance-dashboard-api-ozlf.onrender.com`.
 2. **Register** `POST /api/auth/register` returns the new `user` (password is bcrypt-hashed; no JWT).
 3. **Login** `POST /api/auth/login` with JSON body `{ "email", "password" }` returns `token` (JWT) and `user`.
 4. Save the `token` from the login response.
