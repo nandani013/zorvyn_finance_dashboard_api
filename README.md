@@ -6,8 +6,8 @@ Express.js backend for a finance dashboard with **MongoDB**, **JWT authenticatio
 
 This project is deployed and accessible online.
 
-- **🔗 Base URL**: `https://zorvyn-finance-dashboard-api-ozlf.onrender.com`
-- **📊 Example API**: `GET https://zorvyn-finance-dashboard-api-ozlf.onrender.com/api/dashboard/summary`
+- **🔗 Base URL**: [https://zorvyn-finance-dashboard-api-ozlf.onrender.com](https://zorvyn-finance-dashboard-api-ozlf.onrender.com)
+- **📊 Example API**: GET [https://zorvyn-finance-dashboard-api-ozlf.onrender.com/api/dashboard/summary](https://zorvyn-finance-dashboard-api-ozlf.onrender.com/api/dashboard/summary)
 - **🔐 Authentication**: Use Bearer Token in `Authorization` header.
 
 ## Stack
