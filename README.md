@@ -34,7 +34,7 @@ Express.js backend for a finance dashboard with **MongoDB**, **JWT authenticatio
 
    - `MONGO_URI` – Atlas connection string (alias: `MONGODB_URI`), including database name (e.g. `.../finance_dashboard?retryWrites=true&w=majority`).
    - `JWT_SECRET` – long random string.
-   - `PORT` – optional; defaults to **5000**.
+   - `PORT` – optional; defaults to **5001**.
 
 3. Install and run:
 
@@ -46,7 +46,7 @@ Express.js backend for a finance dashboard with **MongoDB**, **JWT authenticatio
 
    Optional seed env vars: `SEED_ADMIN_EMAIL`, `SEED_ADMIN_PASSWORD` (defaults in `scripts/seedAdmin.js`).
 
-4. Health check: `GET http://localhost:5000/health`
+4. Health check: `GET http://localhost:5001/health`
 
 ## API overview
 
@@ -72,7 +72,7 @@ Express.js backend for a finance dashboard with **MongoDB**, **JWT authenticatio
 
 ### Postman
 
-1. Create requests with base URL `http://localhost:5000`.
+1. Create requests with base URL `http://localhost:5001`.
 2. **Register** `POST /api/auth/register` returns the new `user` (password is bcrypt-hashed; no JWT).
 3. **Login** `POST /api/auth/login` with JSON body `{ "email", "password" }` returns `token` (JWT) and `user`.
 4. Save the `token` from the login response.
@@ -80,7 +80,7 @@ Express.js backend for a finance dashboard with **MongoDB**, **JWT authenticatio
 
 ## Project layout
 
-- `src/server.js` – loads `dotenv`, connects DB, listens on **port 5000** (or `PORT`).
+- `src/server.js` – loads `dotenv`, connects DB, listens on **port 5001** (or `PORT`).
 - `src/app.js` – Express app, `cors`, `express.json`, routes, 404, error handler.
 - `src/models/` – Mongoose schemas.
 - `src/middleware/` – JWT auth, RBAC, validation, errors.
