@@ -97,3 +97,27 @@ Express.js backend for a finance dashboard with **MongoDB**, **JWT authenticatio
 
 - Single shared ledger for all records; multi-tenant orgs would add `orgId` and scope queries.
 - No refresh tokens or password reset flows—intentionally minimal for the assignment.
+
+## API Screenshots & Proof of Work
+
+Here is the visual proof displaying our working API flow, Database connection, and Authentication security:
+
+### 1. MongoDB Database Setup
+*Shows our connection to MongoDB Atlas and the stored database records in the `financialrecords` collection.*
+![MongoDB Atlas Database](./asset/database.png)
+
+### 2. Login API (Authentication Proof)
+*Proves successful user login and that the JWT token is being generated properly (`200 OK`).*
+![Login API / JWT Token](./asset/login.png)
+
+### 3. Add Record API (Authorization Proof)
+*Proves we can parse JSON requests, handle role-based access control (using the `Bearer <token>` in the Headers tab), and successfully store a new financial record (`201 Created`).*
+![Add Record API](./asset/add-record.png)
+
+### 4. Get Records API
+*Proves successful retrieval of private financial data once the user is authenticated.*
+![Get Records API](./asset/get-records.png)
+
+### 5. Dashboard Summary API
+*Proves data aggregation works for generating our financial summaries dynamically.*
+![Dashboard Summary](./asset/dashboard-summary.png)
